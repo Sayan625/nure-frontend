@@ -4,6 +4,7 @@ import { TotalCost } from '../Controllers/utils';
 import { useDispatch } from 'react-redux';
 import { setCurrentOrder } from '../redux/orderSlice';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function Payment() {
   // State to store order details, including address, amount, date, and products
@@ -24,6 +25,11 @@ function Payment() {
 
   // Function to continue to the next step (e.g., order confirmation)
   function HandleContinue() {
+    if(!order.address || order.address=="")
+    {
+      toast.error("address can not be empty")
+      return
+    }
     // Set the current order in the Redux store
     dispatch(setCurrentOrder(order));
     // Navigate to the order confirmation page
@@ -66,7 +72,7 @@ function Payment() {
               </label>
             </div>
           </form>
-          <button disabled={order.address.trim()==""? true: false} onClick={() => HandleContinue()} className="btn btn-primary mt-3">
+          <button onClick={() => HandleContinue()} className="btn btn-primary mt-3">
             Continue
           </button>
         </div>
