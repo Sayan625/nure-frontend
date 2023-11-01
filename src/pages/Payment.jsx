@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 function Payment() {
   // State to store order details, including address, amount, date, and products
   const [order, setOrder] = useState({
-    address: JSON.parse(localStorage.getItem('user')).address, // Initialize address with user's address
+    address: JSON.parse(localStorage.getItem('user'))? JSON.parse(localStorage.getItem('user')).address : "", // Initialize address with user's address
     amount: 0, // Initialize amount to 0
     date: Date.now(), // Set the current date
     products: [], // Initialize products as an empty array
