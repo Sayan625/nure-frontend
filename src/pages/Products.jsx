@@ -20,7 +20,7 @@ const Products = () => {
   const [maxPage, setMaxPage] = useState(1); // Maximum number of pages
   const [currPage, setCurrPage] = useState(1); // Current page
 
-  const itemsPerPage = 1; // Number of items to display per page
+  const itemsPerPage = 5; // Number of items to display per page
   const indexOfLastItem = currPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
