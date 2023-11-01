@@ -77,7 +77,7 @@ const ProductDetails = () => {
         <div className="col-md-6">
           <h2 className='text-center'>{data?.title}</h2>
           <p className="h5">{data?.desc}</p>
-          <p className="h3 text-center">${data?.price}</p>
+          <p className="h3 text-center">₹ {data?.price}</p>
           <p className="h6">category: #{data?.category?.name}</p>
           <div className="text-center">
             {HandleRating()}

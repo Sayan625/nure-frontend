@@ -81,7 +81,7 @@ const OrderDetails = ({ order, showDetail, current }) => {
         {/* Display the order date if it's not the current order */}
         {!current && <p className="card-text">Date: {DateConverter(order?.createdAt)}</p>}
         {/* Display the total order amount */}
-        <p className="card-text">Total Amount: ${order?.amount}</p>
+        <p className="card-text">Total Amount: ₹ {order?.amount}</p>
         {/* Display the order address and status if showDetail is true */}
         {showDetail && (
           <>
