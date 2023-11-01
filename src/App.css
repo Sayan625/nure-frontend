@@ -1,38 +1,52 @@
 .App {
-  text-align: center;
+  /* width: 100vw; */
+  height: 100vh;
+  /* overflow: -moz-scrollbars-vertical; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* hero section and its components style */
+.hero {
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1561365452-adb940139ffa?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.brandName {
+  font-size: 6rem;
+}
+.brand {
+  border-right: 1px solid white;
+
+}
+
+a:focus{
+  background-color: rgb(253, 224, 107);
+}
+a.silent:focus{
+  background-color: inherit;
+}
+
+/* media query for carousel for large screen */
+@media only screen and (max-width: 768px) {
+
+  .col:nth-child(2n) {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* media query for carousel for medium screen */
 
-.App-link {
-  color: #61dafb;
-}
+@media only screen and (max-width: 576px) {
+  .col:nth-child(2n+1):not(:first-child) {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+      display: none;
   }
 }
+
