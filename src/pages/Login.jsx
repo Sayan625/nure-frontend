@@ -79,7 +79,7 @@ function Login() {
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   className="form-control rounded-0"
-                  placeholder="Enter your email"
+                  placeholder="sayan@gmail.com"
                   required
                 />
               </div>
@@ -94,7 +94,7 @@ function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                     type={visible ? "text" : "password"}
                     className="form-control rounded-0"
-                    placeholder="Enter your password"
+                    placeholder="1234"
                     required
                   />
                   {/* Button to toggle password visibility */}
